@@ -21,10 +21,13 @@
 
 Настроить Android Virtual Device
 
+Установить Node Package Manager  `sudo apt install npm`
+
+А затем сервер Appium: `npm install -g appium` 
+
 Положить в папку `src/test/java/resources` .apk файл
 В классе `src/test/java/exp/core/TestBase` в методе `beforeClass` актуализировать настройки.  
 В классе `src/test/javav/exp/Probe` изменить ожидаемые поля на актуальные.
-
 
 Запуск тестов/команд строится по принципу:  
 
