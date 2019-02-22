@@ -1,4 +1,3 @@
-revo-mobile-autotest
 # appiumExample
 
 Установка oracle-java8, Ubuntu:
@@ -17,6 +16,19 @@ revo-mobile-autotest
 
 `dpkg-reconfigure locales`
 
-Команда строится по принципу: 
+Скачать, и установить Android Studio
+`https://developer.android.com/studio/`
 
-`./gradlew` запускает тесты, вытягивая актуальные изменения из репозитория. Дополнительные команды выполняются на текущей версии.
+Настроить Android Virtual Device
+
+Положить в папку `src/test/java/resources` .apk файл
+В классе `src/test/java/exp/core/TestBase` в методе `beforeClass` актуализировать настройки.  
+В классе `src/test/javav/exp/Probe` изменить ожидаемые поля на актуальные.
+
+
+Запуск тестов/команд строится по принципу:  
+
+`./gradlew` очищает билд, запускает тесты = `./gradlew clean test` 
+`./gradlew allureReport` генерирует отчет Allure о прогоне
+`./gradlew dependencyUpdates` показывает, у каких зависимостей есть обновления.
+`./gradlew useLatestVersions` обновляет зависимости в файле `build.gradle` до последних обнаруженных. 

@@ -21,7 +21,7 @@ ext {
     appiumJavaClientVersion ='7.0.0'
     restAssuredVersion = '3.3.0'
 }
-defaultTasks 'clean', 'test', 'allureReport'
+defaultTasks 'clean', 'test'
 
 compileTestJava {
     sourceCompatibility = 1.8
